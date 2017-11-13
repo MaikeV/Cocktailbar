@@ -1,0 +1,14 @@
+Projekt Cocktails:
+- Gefordert:
+	- Es soll eine Webseite erstellt werden. Auf dieser geht es hauptsächlich um das Erstellen und Bewerten von Cocktail-Rezepten.
+		Dazu existiert eine Zutatendatenbank. Wichtig hier wären Allergie- und Zusatzstoffe.
+	- Kunden können einen Account mit Passwort anlegen um neue Rezepte und Zutaten anzulegen. Auch kann man nur ein Rezept bewerten,
+		wenn man eingeloggt ist. Gäste können alles sehen, aber nichts erstellen/bearbeiten.
+	- Ein Schlüssel-Feature ist eine umfangreiche Suchfunktion, welchees ermöglicht, nach Zutaten und Zutatenkombinationen zu suchen.
+		Auch sollen Rezepte nach verschiedenen Kriterien sortiert werden können.
+		
+- Abgabe:
+	- vor Weihnachten !
+	- 1 x Webseite mit DB
+	- 1 x Planungen (im Vorfeld erstellt)
+	- 1 x Protokolle, die zeigen, wer was, wie viel, wann, wo gemacht hat

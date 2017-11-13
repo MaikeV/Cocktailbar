@@ -1,0 +1,64 @@
+.divHeader {
+    background-color: lawngreen;
+    height: 100px;
+
+}
+
+.divFooter {
+    background-color: lawngreen;
+    height: 100px;
+}
+
+.search {
+
+}
+
+.divHeader > button {
+    horiz-align: right;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+.divHeader ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: none;
+}
+
+.divHeader li {
+    float: left;
+}
+
+.divHeader li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.best li, .new li {
+    display: inline;
+    float: left;
+}
+
+.new a, .best a{
+    display: block;
+    padding: 8px;
+    background: none;
+}
+
+.whatsNew {
+    width: 30%;
+    border-color: dimgrey;
+}
+
+.best {
+    width: 30%;
+    border-color: dimgrey;
+}
