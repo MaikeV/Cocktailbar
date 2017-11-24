@@ -9,8 +9,16 @@
     height: 100px;
 }
 
-.search {
+body {
+    height: 500px;
+}
 
+.highlights {
+    height: 500px;
+}
+
+.search {
+    margin-left: 70%;
 }
 
 .divHeader > button {
@@ -42,23 +50,23 @@ button {
     text-decoration: none;
 }
 
-.best li, .new li {
+.best li, .new li, li {
     display: inline;
-    float: left;
 }
 
-.new a, .best a{
+.new a, .best a, a {
     display: block;
     padding: 8px;
     background: none;
 }
 
 .whatsNew {
-    width: 30%;
-    border-color: dimgrey;
+    border: 1px solid dimgrey;
+    width: 40%;
 }
 
 .best {
-    width: 30%;
-    border-color: dimgrey;
+    border: 1px solid dimgrey;
+    width: 40%;
 }
+
