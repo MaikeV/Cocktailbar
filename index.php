@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+    include 'connection.php';
+?>
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="index.nocache.css">
@@ -8,7 +11,8 @@
 <header>
     <div class="divHeader">
         <button type="submit" class="profile">Mein Konto</button>
-        <button type="submit" class="login" onclick="location.href = 'login.php'">Einloggen/Registrieren</button> <br>
+        <button type="submit" class="login" onclick="location.href = 'login.php'">Einloggen</button>
+        <button type="submit" class="login" onclick="location.href = 'register.php'">Registrieren</button><br>
         <input class="search" type="search" title="Search" placeholder="Suchen">
         <ul>
             <li>
