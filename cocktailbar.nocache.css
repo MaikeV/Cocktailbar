@@ -1,0 +1,108 @@
+h1 {
+    color: white;
+    font-family:"Segoe UI",Arial,sans-serif;;
+    margin-left: 1%;
+}
+
+button {
+    margin-top: 10px;
+    margin-left: 30px;
+    border: 1px solid #4b4b4b;
+    border-radius: 3px;
+    height: 30px;
+    width: 100px;
+    position: relative;
+    font-family:"Segoe UI",Arial,sans-serif;
+    color: white;
+    background-color: dimgrey;
+}
+
+button:hover {
+    background-color: #4b4b4b;
+}
+
+label {
+    font-family: "Segoe UI",Arial,sans-serif;
+    color: white;
+    margin: 30px 30px 30px 20px;
+    width: 100px;
+    text-align: right;
+    position: relative;
+}
+
+input[type=file] {
+
+}
+
+input[type=text], input[type=password], input[type=email]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.register, .login{
+    margin-top: 150px;
+    margin-left: 25%;
+    width: 50%;
+    border-radius: 5px;
+    background-color: #51b504;
+    padding: 20px;
+}
+
+.topNav{
+    margin-left: -8px;
+    position:relative;
+    z-index:2;
+    font-size:17px;
+    background-color: #51b504;
+    color:#f1f1f1;
+    width:100%;
+    padding:0;
+    letter-spacing:1px;
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+.topNav a{
+    padding:10px 15px 9px 15px !important;
+}
+.topNav .navBar a:hover{
+    background-color:#000000 !important;
+    color:#ffffff !important;
+}
+.topNav .navBar a.active {
+    background-color:#4CAF50;
+    color:#ffffff;
+}
+
+.navButton {
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+}
+
+.navBar .navBarItem {
+    margin-top: 15px;
+    padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    outline: none;
+    display: block;
+}
+
+.navBar .navButton {
+    white-space: normal;
+}
+
+.navBarRight {
+    float: right!important;
+    margin-right: 10px;
+}

@@ -5,55 +5,29 @@
 ?>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="index.nocache.css">
+    <link rel="stylesheet" href="cocktailbar.nocache.css">
     <title>Cocktailbar</title>
 </head>
-<header>
-    <div class="divHeader">
-        <button type="submit" class="profile">Mein Konto</button>
-        <button type="submit" class="login" onclick="location.href = 'login.php'">Einloggen</button>
-        <button type="submit" class="login" onclick="location.href = 'register.php'">Registrieren</button><br>
-        <input class="search" type="search" title="Search" placeholder="Suchen">
-        <ul>
-            <li>
-                <a>Seite 1</a>
-            </li>
-            <li>
-                <a>Seite 2</a>
-            </li>
-        </ul>
-    </div>
-</header>
 <body>
-    <div class="highlights">
-        <div class="whatsNew">
-            <ul class="new">
-                <li>
-                    <a>Cocktail 1</a>
-                    <a>Cocktail 2</a>
-                    <a>Cocktail 3</a>
-                </li>
-            </ul>
-        </div>
-        <div class="best">
-            <ul class="best">
-                <li>
-                    <?php
-                        
-                    ?>
-                </li>
-            </ul>
+    <div id="topNav" class="topNav" style="position: fixed; top: 0">
+        <div style="overflow:auto">
+            <div class="navBar navLeft" style="width: 100%; overflow: hidden; height: 75px">
+                <a type="submit" class="navBarItem navButton" href="index.php">Startseite</a>
+                <a type="submit" class="navBarItem navButton" href="account.php">Mein Konto</a>
+                <a type="submit" class="navBarItem navButton" href = "login.php">Einloggen</a>
+                <a type="submit" class="navBarItem navButton" href = "register.php">Registrieren</a>
+                <a type="submit" class="navBarItem navButton" href = "addCocktail.php">Neuen Cocktail erstellen</a>
+                <a type="submit" class="navBarItem navButton" href = "register.php">Meine Favoriten</a>
+                <input class="search navBarItem navBarRight" type="search" title="Search" placeholder="Suchen">
+            </div>
         </div>
     </div>
-</body>
-<footer>
-    <div class="divFooter">
-        <ul>
-            <li>
-                <a href="impressum.html">Impressum</a>
-                <a href="contact.html">Kontakt</a>
-            </li>
-        </ul>
+    <div class="newest">
+        <div class="newest">
+            <?php
+                $query = "SELECT * FROM t_cocktail order by C_ID desc limit 5";
+            ?>
+        </div>
     </div>
-</footer>
+    </body>
 </html>
