@@ -14,7 +14,7 @@
                 <a type="submit" class="navBarItem navButton" href="account.php">Mein Konto</a>
                 <a type="submit" class="navBarItem navButton" href = "login.php">Einloggen</a>
                 <a type="submit" class="navBarItem navButton" href = "register.php">Registrieren</a>
-                <a type="submit" class="navBarItem navButton" href = "addCocktail.php">Neuen Cocktail erstellen</a>
+                <a type="submit" class="navBarItem navButton" href = "cocktail.php">Neuen Cocktail erstellen</a>
                 <a type="submit" class="navBarItem navButton" href = "register.php">Meine Favoriten</a>
                 <input class="search navBarItem navBarRight" type="search" title="Search" placeholder="Suchen">
             </div>
@@ -34,6 +34,7 @@
 
                 if ($password == $reenteredPW) {
                     $hash = hash('sha256', $password); //Verschlüsseln Entschlüsseln
+                    echo $hash;
                     $query = "INSERT INTO t_user (Firstname, Lastname, Password, Username, Mail, Picture) VALUES ('$firstName', '$lastName', '$password', '$userName', '$email', '$picture') ";
                     mysqli_query($connection,$query);
                     echo "Herzlich Willkommen, Sie haben sich erfolgreich Registriert";

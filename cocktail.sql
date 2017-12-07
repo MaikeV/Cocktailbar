@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 27. Nov 2017 um 12:54
+-- Erstellungszeit: 07. Dez 2017 um 14:18
 -- Server-Version: 10.1.26-MariaDB
 -- PHP-Version: 7.1.8
 
@@ -128,10 +128,18 @@ CREATE TABLE `t_user` (
   `Firstname` varchar(50) NOT NULL,
   `Lastname` varchar(50) NOT NULL,
   `Password` varchar(300) NOT NULL,
-  `Username` int(11) NOT NULL,
-  `Mail` int(11) NOT NULL,
+  `Username` varchar(25) NOT NULL,
+  `Mail` varchar(100) NOT NULL,
   `Picture` varchar(256) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `t_user`
+--
+
+INSERT INTO `t_user` (`U_ID`, `Firstname`, `Lastname`, `Password`, `Username`, `Mail`, `Picture`) VALUES
+(8, 'Patrick', 'Piernikarczyk', '123456', 'Pini', 'patrick-piernikarczyk@gmx.de', ''),
+(9, 'Ulrike', 'Guljasch', 'blabla', 'Uli', 'u.guljasch@web.de', '');
 
 --
 -- Indizes der exportierten Tabellen
@@ -195,7 +203,9 @@ ALTER TABLE `t_unit`
 -- Indizes für die Tabelle `t_user`
 --
 ALTER TABLE `t_user`
-  ADD PRIMARY KEY (`U_ID`);
+  ADD PRIMARY KEY (`U_ID`),
+  ADD UNIQUE KEY `Username` (`Username`),
+  ADD UNIQUE KEY `Mail` (`Mail`);
 
 --
 -- AUTO_INCREMENT für exportierte Tabellen
@@ -220,7 +230,7 @@ ALTER TABLE `t_ingredient`
 -- AUTO_INCREMENT für Tabelle `t_user`
 --
 ALTER TABLE `t_user`
-  MODIFY `U_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `U_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- Constraints der exportierten Tabellen
 --
