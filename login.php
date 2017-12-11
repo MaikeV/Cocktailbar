@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php
-        include 'connection.php';
-    ?>
+<?php
+    session_start();
+    include 'connection.php';
+?>
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="cocktailbar.nocache.css">
