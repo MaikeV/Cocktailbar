@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php
-        include 'connection.php';
-    ?>
+<?php
+    session_start();
+    include 'connection.php';
+?>
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="cocktailbar.nocache.css">
@@ -23,7 +24,7 @@
         </div>
     </div>
         <div class="login">
-            <form action="">
+            <form action="SaveEntry.php" method="post">
                 <h1>Anmelden</h1>
 
                 <label>Benutzername:</label>
@@ -31,6 +32,8 @@
 
                 <label>Passwort:</label>
                 <input placeholder="Passwort" name="passwordLogin" type="password" required><br>
+
+                <input type="hidden" name="type" value="login">
 
                 <button type="submit">Login</button>
                 <button type="button" onclick="location.href = 'index.php'">Zurück</button>
