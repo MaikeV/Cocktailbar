@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5569116b-e9a9-4594-a0d5-3487c578dbb4" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/cocktail.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/SaveEntry.php" afterPath="$PROJECT_DIR$/SaveEntry.php" />
+      <change beforePath="$PROJECT_DIR$/cocktail.php" afterPath="$PROJECT_DIR$/cocktail.php" />
       <change beforePath="$PROJECT_DIR$/cocktailbar.nocache.css" afterPath="$PROJECT_DIR$/cocktailbar.nocache.css" />
       <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change beforePath="$PROJECT_DIR$/newCocktail.php" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,16 +35,16 @@
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
-              <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+              <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
               <folding>
-                <marker date="1513016266135" expanded="true" signature="284:1513" ph="..." />
-                <marker date="1513016266135" expanded="false" signature="341:364" ph="..." />
-                <marker date="1513016266135" expanded="true" signature="365:1493" ph="..." />
-                <marker date="1513016266135" expanded="false" signature="399:412" ph="..." />
-                <marker date="1513016266135" expanded="true" signature="413:1470" ph="..." />
-                <marker date="1513016266135" expanded="false" signature="474:517" ph="..." />
-                <marker date="1513016266135" expanded="true" signature="518:1443" ph="..." />
-                <marker date="1513016266135" expanded="true" signature="1577:1616" ph="..." />
+                <marker date="1513016980036" expanded="true" signature="284:1457" ph="..." />
+                <marker date="1513016980036" expanded="false" signature="337:360" ph="..." />
+                <marker date="1513016980036" expanded="true" signature="361:1441" ph="..." />
+                <marker date="1513016980036" expanded="false" signature="391:404" ph="..." />
+                <marker date="1513016980036" expanded="true" signature="405:1422" ph="..." />
+                <marker date="1513016980036" expanded="false" signature="462:505" ph="..." />
+                <marker date="1513016980036" expanded="true" signature="506:1399" ph="..." />
+                <marker date="1513016980036" expanded="true" signature="1519:1527" ph="..." />
               </folding>
             </state>
           </provider>
@@ -49,8 +53,8 @@
       <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            <state relative-caret-position="629">
+              <caret line="37" column="19" lean-forward="false" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -58,16 +62,6 @@
       </file>
       <file leaf-file-name="account.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newCocktail.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/newCocktail.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
@@ -90,7 +84,31 @@
         <entry file="file://$PROJECT_DIR$/connection.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="54" lean-forward="false" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
+              <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cocktail.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cocktail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="36" column="59" lean-forward="false" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
+              <folding>
+                <marker date="1513024161578" expanded="true" signature="1407:1513" ph="..." />
+                <marker date="1513024161578" expanded="true" signature="1440:1513" ph="..." />
+                <marker date="1513024161578" expanded="true" signature="1515:1535" ph="SELECT * FRO... t_unit" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cocktail.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cocktail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -99,18 +117,23 @@
       <file leaf-file-name="SaveEntry.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SaveEntry.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-              <folding />
+            <state relative-caret-position="799">
+              <caret line="47" column="103" lean-forward="false" selection-start-line="47" selection-start-column="103" selection-end-line="47" selection-end-column="103" />
+              <folding>
+                <marker date="1513025440077" expanded="true" signature="818:972" ph="INSERT INTO t_user... " />
+                <marker date="1513025440077" expanded="true" signature="1951:1965" ph="INSERT INTO t_... " />
+                <marker date="1513025440077" expanded="true" signature="1951:1998" ph="INSERT INTO t_cocktail... " />
+                <marker date="1513025440077" expanded="true" signature="1951:2024" ph="INSERT INTO t_cocktail... " />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cocktailbar.nocache.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cocktailbar.nocache.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cocktailbar.nocache.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="110" column="18" lean-forward="false" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="18" />
+            <state relative-caret-position="391">
+              <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -123,6 +146,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -139,11 +163,13 @@
         <option value="$PROJECT_DIR$/login.nocache.css" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/register.php" />
-        <option value="$PROJECT_DIR$/SaveEntry.php" />
         <option value="$PROJECT_DIR$/account.php" />
         <option value="$PROJECT_DIR$/newCocktail.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/cocktail.js" />
         <option value="$PROJECT_DIR$/cocktailbar.nocache.css" />
+        <option value="$PROJECT_DIR$/cocktail.php" />
+        <option value="$PROJECT_DIR$/SaveEntry.php" />
       </list>
     </option>
   </component>
@@ -227,12 +253,12 @@
       <workItem from="1510591331791" duration="14000" />
       <workItem from="1512053642295" duration="115000" />
       <workItem from="1512053894396" duration="7150000" />
-      <workItem from="1513015225425" duration="1308000" />
+      <workItem from="1513015225425" duration="10204000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13179000" />
+    <option name="totallyTimeSpent" value="22075000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -265,7 +291,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -274,14 +302,14 @@
         <state relative-caret-position="340">
           <caret line="20" column="115" lean-forward="false" selection-start-line="20" selection-start-column="115" selection-end-line="20" selection-end-column="115" />
           <folding>
-            <marker date="1513016266135" expanded="true" signature="284:1513" ph="..." />
-            <marker date="1513016266135" expanded="false" signature="341:364" ph="..." />
-            <marker date="1513016266135" expanded="true" signature="365:1493" ph="..." />
-            <marker date="1513016266135" expanded="false" signature="399:412" ph="..." />
-            <marker date="1513016266135" expanded="true" signature="413:1470" ph="..." />
-            <marker date="1513016266135" expanded="false" signature="474:517" ph="..." />
-            <marker date="1513016266135" expanded="true" signature="518:1443" ph="..." />
-            <marker date="1513016266135" expanded="true" signature="1577:1616" ph="..." />
+            <marker date="1513016980036" expanded="true" signature="284:1457" ph="..." />
+            <marker date="1513016980036" expanded="false" signature="337:360" ph="..." />
+            <marker date="1513016980036" expanded="true" signature="361:1441" ph="..." />
+            <marker date="1513016980036" expanded="false" signature="391:404" ph="..." />
+            <marker date="1513016980036" expanded="true" signature="405:1422" ph="..." />
+            <marker date="1513016980036" expanded="false" signature="462:505" ph="..." />
+            <marker date="1513016980036" expanded="true" signature="506:1399" ph="..." />
+            <marker date="1513016980036" expanded="true" signature="1519:1527" ph="..." />
           </folding>
         </state>
       </provider>
@@ -322,7 +350,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-          <folding />
+          <folding>
+            <marker date="1513025440077" expanded="true" signature="818:972" ph="INSERT INTO t_user... " />
+            <marker date="1513025440077" expanded="true" signature="1951:1965" ph="INSERT INTO t_... " />
+            <marker date="1513025440077" expanded="true" signature="1951:1998" ph="INSERT INTO t_cocktail... " />
+            <marker date="1513025440077" expanded="true" signature="1951:2024" ph="INSERT INTO t_cocktail... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -347,14 +380,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1513016266135" expanded="true" signature="284:1513" ph="..." />
-            <marker date="1513016266135" expanded="false" signature="341:364" ph="..." />
-            <marker date="1513016266135" expanded="true" signature="365:1493" ph="..." />
-            <marker date="1513016266135" expanded="false" signature="399:412" ph="..." />
-            <marker date="1513016266135" expanded="true" signature="413:1470" ph="..." />
-            <marker date="1513016266135" expanded="false" signature="474:517" ph="..." />
-            <marker date="1513016266135" expanded="true" signature="518:1443" ph="..." />
-            <marker date="1513016266135" expanded="true" signature="1577:1616" ph="..." />
+            <marker date="1513016980036" expanded="true" signature="284:1457" ph="..." />
+            <marker date="1513016980036" expanded="false" signature="337:360" ph="..." />
+            <marker date="1513016980036" expanded="true" signature="361:1441" ph="..." />
+            <marker date="1513016980036" expanded="false" signature="391:404" ph="..." />
+            <marker date="1513016980036" expanded="true" signature="405:1422" ph="..." />
+            <marker date="1513016980036" expanded="false" signature="462:505" ph="..." />
+            <marker date="1513016980036" expanded="true" signature="506:1399" ph="..." />
+            <marker date="1513016980036" expanded="true" signature="1519:1527" ph="..." />
           </folding>
         </state>
       </provider>
@@ -380,7 +413,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding />
+          <folding>
+            <marker date="1513025440077" expanded="true" signature="818:972" ph="INSERT INTO t_user... " />
+            <marker date="1513025440077" expanded="true" signature="1951:1965" ph="INSERT INTO t_... " />
+            <marker date="1513025440077" expanded="true" signature="1951:1998" ph="INSERT INTO t_cocktail... " />
+            <marker date="1513025440077" expanded="true" signature="1951:2024" ph="INSERT INTO t_cocktail... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -427,24 +465,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="54" lean-forward="false" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/saveEntry.nocache.css" />
     <entry file="file://$PROJECT_DIR$/login.nocache.css" />
-    <entry file="file://$PROJECT_DIR$/SaveEntry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -455,15 +477,32 @@
     <entry file="file://$PROJECT_DIR$/newCocktail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="493">
+          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding>
+            <marker date="1513016980036" expanded="true" signature="284:1457" ph="..." />
+            <marker date="1513016980036" expanded="false" signature="337:360" ph="..." />
+            <marker date="1513016980036" expanded="true" signature="361:1441" ph="..." />
+            <marker date="1513016980036" expanded="false" signature="391:404" ph="..." />
+            <marker date="1513016980036" expanded="true" signature="405:1422" ph="..." />
+            <marker date="1513016980036" expanded="false" signature="462:505" ph="..." />
+            <marker date="1513016980036" expanded="true" signature="506:1399" ph="..." />
+            <marker date="1513016980036" expanded="true" signature="1519:1527" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cocktailbar.nocache.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -476,36 +515,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/register.php">
+    <entry file="file://$PROJECT_DIR$/account.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/connection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+        <state relative-caret-position="17">
+          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="19" lean-forward="false" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cocktail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveEntry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="103" lean-forward="false" selection-start-line="47" selection-start-column="103" selection-end-line="47" selection-end-column="103" />
           <folding>
-            <marker date="1513016266135" expanded="true" signature="284:1513" ph="..." />
-            <marker date="1513016266135" expanded="false" signature="341:364" ph="..." />
-            <marker date="1513016266135" expanded="true" signature="365:1493" ph="..." />
-            <marker date="1513016266135" expanded="false" signature="399:412" ph="..." />
-            <marker date="1513016266135" expanded="true" signature="413:1470" ph="..." />
-            <marker date="1513016266135" expanded="false" signature="474:517" ph="..." />
-            <marker date="1513016266135" expanded="true" signature="518:1443" ph="..." />
-            <marker date="1513016266135" expanded="true" signature="1577:1616" ph="..." />
+            <marker date="1513025440077" expanded="true" signature="818:972" ph="INSERT INTO t_user... " />
+            <marker date="1513025440077" expanded="true" signature="1951:1965" ph="INSERT INTO t_... " />
+            <marker date="1513025440077" expanded="true" signature="1951:1998" ph="INSERT INTO t_cocktail... " />
+            <marker date="1513025440077" expanded="true" signature="1951:2024" ph="INSERT INTO t_cocktail... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cocktailbar.nocache.css">
+    <entry file="file://$PROJECT_DIR$/cocktail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="110" column="18" lean-forward="false" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="460">
+          <caret line="36" column="59" lean-forward="false" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
+          <folding>
+            <marker date="1513024161578" expanded="true" signature="1407:1513" ph="..." />
+            <marker date="1513024161578" expanded="true" signature="1440:1513" ph="..." />
+            <marker date="1513024161578" expanded="true" signature="1515:1535" ph="SELECT * FRO... t_unit" />
+          </folding>
         </state>
       </provider>
     </entry>

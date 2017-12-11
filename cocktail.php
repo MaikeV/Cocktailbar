@@ -6,35 +6,54 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="cocktailbar.nocache.css">
+    <script src="cocktail.js"></script>
     <title>Title</title>
 </head>
 <body>
     <div class="create">
-        <label>Name</label>
-        <input type="text" id="CName">
-        <div class="ingredients">
-            <table>
-                <thead>
-                    <tr>
-                        <td><label>Zutat</label></td>
-                        <td><label>Einheit</label></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><input type="text" title="ingredient"></td>
-                    <td><select title="unit">
-                            <option></option> //tabelle db
-                        </select></td>
-                    <td><button class="btnLine">+</button></td>
-                    <td><button class="btnLine">-</button></td>
-                </tr>
-                </tbody>
-            </table>
+        <form action="SaveEntry.php" method="post">
+            <label for="CName">Name:</label>
+            <input type="text" name="CName" title="CocktailName" placeholder="Name" required>
 
-        </div>
+            <label for="CPicture">Foto:</label>
+            <input type="file" id="CPicture">
+
+            <div class="ingredients">
+                <input type="button" class="btnLine" onClick="addRow('ingredientTable')" value="+" />
+                <input type="button" class="btnLine" onClick="removeRow('ingredientTable')" value="-" />
+
+                <table>
+                    <thead>
+                        <tr>
+                            <td><label>Zutat</label></td>
+                            <td><label>Menge</label></td>
+                            <td><label>Einheit</label></td>
+                        </tr>
+                    </thead>
+                    <tbody id="ingredientTable">
+                    <tr>
+                        <td><input type="text" title="ingredient" name="ingredient" required></td>
+                        <td><input type="number" title="amount" name="amount" required></td>
+                        <td><select title="unit" name="unit">
+
+                        <?php
+                                $query = "SELECT * FROM t_unit";
+                                $units = mysqli_query($connection, $query);
+
+                                while($t_unit = mysqli_fetch_object($units)) {
+                                    echo "<option>$t_units->Description</option>";
+                                }
+
+                                echo   "</select></td>";
+                         ?>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <input type="hidden" name="type" value="newCocktail">
+
+            <button type="submit">Speichern</button>
+        </form>
     </div>
 </body>
 </html>

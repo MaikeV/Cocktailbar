@@ -33,7 +33,23 @@
                     echo "Passwörter stimmen nicht überein";
                     echo "<br><button onclick=\"location.href = 'register.php'\">Zurück</button>";
                 }
+            } else if($type == "newCocktail") {
+                if (isset($_POST) == true && empty($_POST) == false) {
+                    $name = $_POST["name"];
+                    $picture = $_POST["CPicture"];
+                    $ingredient = $_POST["ingredient"];
+                    $amount = $_POST["amount"];
+                    $unit = $_POST["unit"];
+
+                    $query = "INSERT INTO t_cocktail(Recipename, CocktailPic) VALUES('$name', $picture)";
+                    mysqli_query($connection, $query);
+
+                    echo "Cocktail wurde erfolgreich gespeichert";
+                    echo "<br><button onclick=\"location.href = 'index.php'\">Zur Startseite</button>";
+                }
+
             }
+
         ?>
     </body>
 </html>
