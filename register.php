@@ -9,19 +9,6 @@
     <title>Title</title>
 </head>
 <body>
-    <div id="topNav" class="topNav" style="position: fixed; top: 0">
-        <div style="overflow:auto">
-            <div class="navBar navLeft" style="width: 100%; overflow: hidden; height: 75px">
-                <a type="submit" class="navBarItem navButton" href="index.php">Startseite</a>
-                <a type="submit" class="navBarItem navButton" href="account.php">Mein Konto</a>
-                <a type="submit" class="navBarItem navButton" href = "login.php">Einloggen</a>
-                <a type="submit" class="navBarItem navButton" href = "register.php">Registrieren</a>
-                <a type="submit" class="navBarItem navButton" href = "cocktail.php">Neuen Cocktail erstellen</a>
-                <a type="submit" class="navBarItem navButton" href = "register.php">Meine Favoriten</a>
-                <input class="search navBarItem navBarRight" type="search" title="Search" placeholder="Suchen">
-            </div>
-        </div>
-    </div>
     <div class="register">
         <form action="SaveEntry.php" method="post">
             <h1>Neuen Account anlegen</h1>
