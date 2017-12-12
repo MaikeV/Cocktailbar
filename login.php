@@ -21,6 +21,7 @@
                 <input placeholder="Passwort" name="passwordLogin" type="password" required><br>
 
                 <input type="hidden" name="type" value="login">
+                <input type="hidden" name="dummy" value="nologin">
 
                 <button type="submit">Login</button>
                 <button type="button" onclick="location.href = 'index.php'">Zurück</button>
