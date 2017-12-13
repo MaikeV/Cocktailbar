@@ -49,6 +49,15 @@
                     </tr>
                     </tbody>
                 </table>
+                <fieldset>
+                    <p>Cocktail enthält Alkohol</p>
+                    <label for="true">Ja</label>
+                    <input type="radio" id="true" name="rbtnAlc" value="Ja" checked>
+                    <label for="false">Nein</label>
+                    <input type="radio" id="false" name="rbtnAlc" value="Nein">
+                </fieldset>
+                <label for="taRecipe"></label>
+                <textarea placeholder="Zubereitung" id="taRecipe"></textarea>
             </div>
             <input type="hidden" name="type" value="newCocktail">
 

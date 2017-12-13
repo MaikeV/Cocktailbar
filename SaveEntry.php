@@ -43,7 +43,7 @@
                     mysqli_query($connection, $query);
 
                     echo "Cocktail wurde erfolgreich gespeichert";
-                    echo "<br><button onclick=\"location.href = 'index.php'\">Zur Startseite</button>";
+                    echo "<br><button onclick=\"location.href = 'main.php'\">Zur Startseite</button>";
                 }
 
             } else if($type == "login") {

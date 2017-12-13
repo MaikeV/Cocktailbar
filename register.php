@@ -38,7 +38,7 @@
             <input type="hidden" name="type" value="newUser">
 
             <button type="submit">Registrieren</button>
-            <button type="button" onclick="location.href = 'index.php'">Zurück</button>
+            <button type="button" onclick="location.href = 'main.php'">Zurück</button>
         </form>
     </div>
 </body>
