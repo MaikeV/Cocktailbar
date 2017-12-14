@@ -1,6 +1,5 @@
 <html>
 <?php
-    session_start();
     include("connection.php");
 ?>
     <head>
@@ -89,6 +88,7 @@
                 //echo $checkpw;
                 if ( $varrow == $varpass){
                     echo "Sie haben sich erfolgreich angemeldet";
+                    session_start();
                 } else {
                     echo "Benutzername und Passwort stimmen nicht überein";
                     //echo var_dump($passwordsha);

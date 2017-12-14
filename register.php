@@ -42,8 +42,4 @@
         </form>
     </div>
 </body>
-<?php
-session_destroy();
-echo "Sitzung beendet";
-?>
 </html>
