@@ -25,6 +25,7 @@
                 <button type="submit">Login</button>
                 <button type="button" onclick="location.href = 'main.php'">Zurück</button>
             </form>
+
         </div>
     </body>
 </html>

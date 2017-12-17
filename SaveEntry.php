@@ -24,7 +24,8 @@
                     $query = "INSERT INTO t_user (Firstname, Lastname, Password, Username, Mail, Picture) VALUES ('$firstName', '$lastName', '$hash', '$userName', '$email', '$picture') ";
                     mysqli_query($connection,$query);
                     echo "Herzlich Willkommen. Sie haben sich erfolgreich registriert";
-                    echo "<br><button onclick=\"location.href = 'index.php'\">Zur Startseite</button>
+                    session_start();
+                    echo "<br><button onclick=\"location.href = 'main.php'\">Zur Startseite</button>
                           <button onclick=\"location.href = 'account.php'\">Mein Konto</button>";
                 } else {
                     echo "Passwörter stimmen nicht überein";
@@ -32,13 +33,25 @@
                 }
             } else if($type == "newCocktail") {
                 if (isset($_POST) == true && empty($_POST) == false) {
-                    $name = $_POST["name"];
+                    $name = $_POST["CName"];
                     $picture = $_POST["CPicture"];
                     $ingredient = $_POST["ingredient"];
                     $amount = $_POST["amount"];
                     $unit = $_POST["unit"];
+                    $alcohol = $_POST["rbtnAlc"];
+                    $howTo = $_POST["taRecipe"];
 
-                    $query = "INSERT INTO t_cocktail(Recipename, CocktailPic) VALUES('$name', $picture)";
+                    foreach($ingredient as $a => $b) {
+
+                        $unitQuery = "INSERT INTO t_unit(Description) VALUES('$unit[$a]')";
+                        $UN_ID[$a] = "SELECT UN_ID FROM t_unit where Description='$unit[$a]'";
+
+                        $ingredientQuery = "INSERT INTO t_ingredient(Ingredient, UN_ID) VALUES('$ingredient[$a]', '$$UN_ID[$a]')";
+                        $I_ID[$a] = "SELECT I_ID FROM t_ingredient WHERE Ingredient = '$ingredient[$a]' AND UN_ID = '$UN_ID[$a]'";
+                    }
+
+                    $query = "INSERT INTO t_cocktail(Alcohol, Recipename, CocktailPic, Preparation) VALUES('$alcohol', '$name', '$picture', '$howTo')";
+
                     mysqli_query($connection, $query);
 
                     echo "Cocktail wurde erfolgreich gespeichert";
@@ -50,51 +63,23 @@
                 $passwordLogin = $_POST['passwordLogin'];
                 $dummy = $_POST["dummy"];
                 $passwordsha = hash('sha256', $passwordLogin);
-                //$query = "SELECT Password FROM t_user WHERE Username='.$userName.'";
                 $result = mysqli_query($connection, "SELECT Password FROM t_user WHERE username='$userName'");
 
-                //echo $result;
-                //mysqli_query($connection, $query);
-                //$result = mysqli_query($connection, $query);
-                //$array = array ($query);
-                //$row = mysqli_fetch_array($query);
-                //$sachen = implode(",", $array);
                 while ($row = $result->fetch_assoc()) {
-                    //echo ($row['Password']);
                     $varrow = $row['Password'];
                 }
 
-                //var_dump($varrow);
-                //echo var_dump($row['Password']);
                 $varpass = ($passwordsha);
-                //$checkpw = substr("" . $row['Password'] . "", );
-                //var_dump($varpass);
-                //echo var_dump($varrow);
 
-                //echo var_dump( "" . $row['Password'] . "");
-                //$a = "string(0) \"\" string(64) \"\"";
-                //$b = "\"";
-                //$row1 = $a . $row['Password'] . $b;
-                //echo $row1;
-
-                //$line1 = ;
-                //$password1 = ["Password"];
-                //$checkpw = $row[];
-                //echo var_dump($result);
-                //echo var_dump($row);
-
-                //echo $array;
-                //echo $array[4];
-                //echo $checkpw;
                 if ( $varrow == $varpass){
                     echo "Sie haben sich erfolgreich angemeldet";
-                    session_start();
+                    session_start(array(session.name => $userName));
+                    echo "<br><button onclick=\"location.href = 'list.php'\">Stöbern</button>";
                 } else {
                     echo "Benutzername und Passwort stimmen nicht überein";
-                    //echo var_dump($passwordsha);
+                    echo "<br><button onclick=\"location.href = 'login.php'\">Zurück</button>";
                 }
             }
-
         ?>
     </body>
 </html>

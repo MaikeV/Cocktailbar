@@ -18,7 +18,7 @@
                         <a type="submit" class="navBarItem navButton" href="login.php" target="display">Einloggen</a>
                         <a type="submit" class="navBarItem navButton" href="register.php" target="display">Registrieren</a>
                         <a type="submit" class="navBarItem navButton" href="cocktail.php" target="display">Neuen Cocktail erstellen</a>
-                        <a type="submit" class="navBarItem navButton" href="favourites.php" target="display">Meine Favoriten</a>
+                        <a type="submit" class="navBarItem navButton" href="list.php" target="display">Cocktails</a>
                         <input class="search navBarItem navBarRight" type="search" title="Search" placeholder="Suchen">
                     </div>
                 </div>
