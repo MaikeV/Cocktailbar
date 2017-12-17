@@ -8,6 +8,7 @@
     </head>
     <body>
         <?php
+        session_start();
             $type = $_POST["type"];
 
             if($type == "newUser") {
@@ -65,20 +66,29 @@
                 $passwordsha = hash('sha256', $passwordLogin);
                 $result = mysqli_query($connection, "SELECT Password FROM t_user WHERE username='$userName'");
 
+                $varrow = "";
+
                 while ($row = $result->fetch_assoc()) {
                     $varrow = $row['Password'];
                 }
 
                 $varpass = ($passwordsha);
+                if(!isset(  $_SESSION["login"]) || isset(  $_SESSION["login"]) && $_SESSION["login"] == 0){
+                  if ( $varrow == $varpass){
+                      echo "Sie haben sich erfolgreich angemeldet";
+                       $_SESSION['user'] = $userName;
+                      
+                        $_SESSION["login"] = 1;
+                      echo "<script>
+                        window.parent.location.reload();
+                      </script>";
 
-                if ( $varrow == $varpass){
-                    echo "Sie haben sich erfolgreich angemeldet";
-                    session_start(array(session.name => $userName));
-                    echo "<br><button onclick=\"location.href = 'list.php'\">Stöbern</button>";
-                } else {
-                    echo "Benutzername und Passwort stimmen nicht überein";
-                    echo "<br><button onclick=\"location.href = 'login.php'\">Zurück</button>";
+                  } else {
+                      echo "Benutzername und Passwort stimmen nicht überein";
+                      echo "<br><button onclick=\"location.href = 'login.php'\">Zurück</button>";
+                  }
                 }
+
             }
         ?>
     </body>

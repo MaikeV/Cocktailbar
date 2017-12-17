@@ -4,6 +4,10 @@ h1 {
     margin-left: 1%;
 }
 
+    .hidden {
+        display: none;
+    }
+
 thead {
     text-align: center;
     font-size: large;
