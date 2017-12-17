@@ -25,7 +25,6 @@
                     $query = "INSERT INTO t_user (Firstname, Lastname, Password, Username, Mail, Picture) VALUES ('$firstName', '$lastName', '$hash', '$userName', '$email', '$picture') ";
                     mysqli_query($connection,$query);
                     echo "Herzlich Willkommen. Sie haben sich erfolgreich registriert";
-                    session_start();
                     echo "<br><button onclick=\"location.href = 'main.php'\">Zur Startseite</button>
                           <button onclick=\"location.href = 'account.php'\">Mein Konto</button>";
                 } else {
@@ -44,11 +43,16 @@
 
                     foreach($ingredient as $a => $b) {
 
-                        $unitQuery = "INSERT INTO t_unit(Description) VALUES('$unit[$a]')";
                         $UN_ID[$a] = "SELECT UN_ID FROM t_unit where Description='$unit[$a]'";
 
                         $ingredientQuery = "INSERT INTO t_ingredient(Ingredient, UN_ID) VALUES('$ingredient[$a]', '$$UN_ID[$a]')";
                         $I_ID[$a] = "SELECT I_ID FROM t_ingredient WHERE Ingredient = '$ingredient[$a]' AND UN_ID = '$UN_ID[$a]'";
+                    }
+
+                    if ($alcohol == "Ja") {
+                        $alcohol = 1;
+                    } else {
+                        $alcohol = 0;
                     }
 
                     $query = "INSERT INTO t_cocktail(Alcohol, Recipename, CocktailPic, Preparation) VALUES('$alcohol', '$name', '$picture', '$howTo')";
@@ -59,7 +63,44 @@
                     echo "<br><button onclick=\"location.href = 'main.php'\">Zur Startseite</button>";
                 }
 
-            } else if($type == "login") {
+            } else if ($type = "newIngredient") {
+                $name = $_POST["name"];
+                $alcohol = $_POST["alcohol"];
+                $allergenic = $_POST["allergenic"];
+
+                $duplicate = "SELECT Ingredient FROM t_ingredient WHERE Ingredient = '$name'";
+                $result = mysqli_query($connection, $duplicate);
+
+                while ($row = $result->fetch_assoc()) {
+                    echo $row['Ingredient'];
+                }
+
+                if($row['Ingredient'] != null) {
+                    echo "Die Zutat existiert bereits";
+                } else {
+                    if ($alcohol == "Ja") {
+                        $alcohol = 1;
+                    } else {
+                        $alcohol = 0;
+                    }
+
+                   // $query = "INSERT INTO t_user (Firstname, Lastname, Password, Username, Mail, Picture) VALUES ('$firstName', '$lastName', '$hash', '$userName', '$email', '$picture') ";
+                    $queryShit = "INSERT INTO t_ingredient(Ingredient, Alcohol) VALUES ('$name', '$alcohol') ";
+                    $Shit = mysqli_query($connection, $queryShit);
+                    echo "$Shit";
+
+                    if ($allergenic != "Keine") {
+                        $I_ID = "SELECT I_ID FROM t_ingredient WHERE Ingredient = '$name'";
+                        $A_ID = "SELECT A_ID FROM t_additive WHERE Allergenic = '$allergenic'";
+                        $additiveQuery = "INSERT INTO t_has (A_ID, I_ID) VALUES ('$A_ID', '$I_ID')";
+
+                        mysqli_query($connection, $additiveQuery);
+                    }
+
+                    echo "Die Zutat wurde erfolgreich gespeichert";
+                }
+            }
+            else if($type == "login") {
                 $userName = $_POST['userNameLogin'];
                 $passwordLogin = $_POST['passwordLogin'];
                 $dummy = $_POST["dummy"];

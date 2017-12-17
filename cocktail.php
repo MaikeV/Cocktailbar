@@ -31,7 +31,18 @@
                     </thead>
                     <tbody id="ingredientTable">
                     <tr>
-                        <td><input type="text" title="ingredient" name="ingredient[]" required></td>
+                        <td><select title="ingredient" name="ingredient[]">
+                        <?php
+                        $query = "SELECT * FROM t_ingredient";
+                        $ingredients = mysqli_query($connection, $query);
+
+                        while($t_ingredient = mysqli_fetch_object($ingredients)) {
+                            echo "<option>$t_ingredient->Ingredient</option>";
+                        }
+
+                        echo   "</select></td>";
+                        ?>
+
                         <td><input type="number" title="amount" name="amount[]" required></td>
                         <td><select title="unit" name="unit[]">
 
@@ -48,13 +59,7 @@
                     </tr>
                     </tbody>
                 </table>
-                <fieldset>
-                    <p>Cocktail enthält Alkohol</p>
-                    <label for="true">Ja</label>
-                    <input type="radio" id="true" name="rbtnAlc" value="Ja" checked>
-                    <label for="false">Nein</label>
-                    <input type="radio" id="false" name="rbtnAlc" value="Nein">
-                </fieldset>
+                <a href="addIngredient.php">Die gewuenschte Zutat ist nicht dabei? Hier Erstellen</a>
                 <label for="taRecipe"></label>
                 <textarea placeholder="Zubereitung" name="taRecipe" id="taRecipe"></textarea>
             </div>
