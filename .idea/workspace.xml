@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5569116b-e9a9-4594-a0d5-3487c578dbb4" name="Default" comment="">
+<<<<<<< Updated upstream
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
 <<<<<<< Updated upstream
 =======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveEntry.php" afterPath="$PROJECT_DIR$/SaveEntry.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cocktail.php" afterPath="$PROJECT_DIR$/cocktail.php" />
+>>>>>>> Stashed changes
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
 >>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -93,8 +97,13 @@
       <file leaf-file-name="cocktail.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cocktail.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="992">
               <caret line="58" column="67" lean-forward="false" selection-start-line="58" selection-start-column="67" selection-end-line="58" selection-end-column="67" />
+=======
+            <state relative-caret-position="1003">
+              <caret line="59" column="64" lean-forward="false" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="64" />
+>>>>>>> Stashed changes
               <folding>
                 <marker date="1513257721109" expanded="true" signature="1502:1522" ph="SELECT * FRO... t_unit" />
               </folding>
@@ -118,11 +127,16 @@
         <entry file="file://$PROJECT_DIR$/SaveEntry.php">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             <state relative-caret-position="276">
               <caret line="80" column="44" lean-forward="true" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
 =======
             <state relative-caret-position="38">
               <caret line="34" column="38" lean-forward="false" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+>>>>>>> Stashed changes
+=======
+            <state relative-caret-position="408">
+              <caret line="24" column="85" lean-forward="false" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
 >>>>>>> Stashed changes
               <folding>
                 <marker date="1513257656652" expanded="true" signature="751:905" ph="INSERT INTO t_user... " />
@@ -142,8 +156,13 @@
       <file leaf-file-name="cocktailbar.nocache.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cocktailbar.nocache.css">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="3672">
               <caret line="153" column="1" lean-forward="false" selection-start-line="153" selection-start-column="1" selection-end-line="153" selection-end-column="1" />
+=======
+            <state relative-caret-position="1939">
+              <caret line="152" column="17" lean-forward="false" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
@@ -210,6 +229,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,8 +242,11 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+<<<<<<< Updated upstream
       <pane id="Scope" />
       <pane id="Scratches" />
+=======
+>>>>>>> Stashed changes
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,6 +291,7 @@
       <workItem from="1513015225425" duration="10204000" />
       <workItem from="1513066772399" duration="812000" />
       <workItem from="1513070619852" duration="21541000" />
+<<<<<<< Updated upstream
       <workItem from="1513190481643" duration="3463000" />
 <<<<<<< Updated upstream
       <workItem from="1513242512365" duration="1343000" />
@@ -279,14 +303,22 @@
       <workItem from="1513254568865" duration="1793000" />
       <workItem from="1513256394654" duration="1207000" />
 >>>>>>> Stashed changes
+=======
+      <workItem from="1513190481643" duration="4059000" />
+      <workItem from="1513510778024" duration="468000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="51127000" />
 =======
     <option name="totallyTimeSpent" value="54009000" />
+>>>>>>> Stashed changes
+=======
+    <option name="totallyTimeSpent" value="48955000" />
 >>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
@@ -614,6 +646,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+<<<<<<< Updated upstream
         </state>
       </provider>
     </entry>
@@ -621,6 +654,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="681">
           <caret line="152" column="17" lean-forward="false" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
+=======
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -687,6 +722,7 @@
 <<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="34">
           <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
           <folding />
@@ -695,6 +731,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state relative-caret-position="408">
+          <caret line="24" column="85" lean-forward="false" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
+>>>>>>> Stashed changes
           <folding>
             <marker date="1512992290733" expanded="true" signature="308:359" ph="SELECT * FRO... t_cocktail" />
           </folding>
@@ -705,11 +745,16 @@
     <entry file="file://$PROJECT_DIR$/SaveEntry.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <state relative-caret-position="276">
           <caret line="80" column="44" lean-forward="true" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
 =======
         <state relative-caret-position="38">
           <caret line="34" column="38" lean-forward="false" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+=======
+        <state relative-caret-position="1003">
+          <caret line="59" column="64" lean-forward="false" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="64" />
+>>>>>>> Stashed changes
           <folding>
             <marker date="1513257656652" expanded="true" signature="751:905" ph="INSERT INTO t_user... " />
             <marker date="1513257656652" expanded="true" signature="2011:2062" ph="INSERT INTO t... " />
@@ -726,12 +771,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cocktail.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="992">
           <caret line="58" column="67" lean-forward="false" selection-start-line="58" selection-start-column="67" selection-end-line="58" selection-end-column="67" />
 >>>>>>> Stashed changes
           <folding>
             <marker date="1513257721109" expanded="true" signature="1502:1522" ph="SELECT * FRO... t_unit" />
           </folding>
+=======
+        <state relative-caret-position="1939">
+          <caret line="152" column="17" lean-forward="false" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
+          <folding />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
