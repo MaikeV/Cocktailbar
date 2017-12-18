@@ -33,12 +33,12 @@
                 }
             } else if($type == "newCocktail") {
                 if (isset($_POST) == true && empty($_POST) == false) {
+                    $userName = $_SESSION['user'];
                     $name = $_POST["CName"];
                     $picture = $_POST["CPicture"];
                     $ingredient = $_POST["ingredient"];
                     $amount = $_POST["amount"];
                     $unit = $_POST["unit"];
-                    $alcohol = $_POST["rbtnAlc"];
                     $howTo = $_POST["taRecipe"];
 
                     foreach($ingredient as $a => $b) {
@@ -49,13 +49,7 @@
                         $I_ID[$a] = "SELECT I_ID FROM t_ingredient WHERE Ingredient = '$ingredient[$a]' AND UN_ID = '$UN_ID[$a]'";
                     }
 
-                    if ($alcohol == "Ja") {
-                        $alcohol = 1;
-                    } else {
-                        $alcohol = 0;
-                    }
-
-                    $query = "INSERT INTO t_cocktail(Alcohol, Recipename, CocktailPic, Preparation) VALUES('$alcohol', '$name', '$picture', '$howTo')";
+                    $query = "INSERT INTO t_cocktail(U_ID, Recipename, CocktailPic, Recipe) VALUES('$userName', '$name', '$picture', '$howTo')";
 
                     mysqli_query($connection, $query);
 
@@ -63,17 +57,14 @@
                     echo "<br><button onclick=\"location.href = 'main.php'\">Zur Startseite</button>";
                 }
 
-            } else if ($type = "newIngredient") {
+            } else if ($type == "newIngredient") {
                 $name = $_POST["name"];
                 $alcohol = $_POST["alcohol"];
                 $allergenic = $_POST["allergenic"];
 
                 $duplicate = "SELECT Ingredient FROM t_ingredient WHERE Ingredient = '$name'";
                 $result = mysqli_query($connection, $duplicate);
-
-                while ($row = $result->fetch_assoc()) {
-                    echo $row['Ingredient'];
-                }
+                $row = $result->fetch_assoc();
 
                 if($row['Ingredient'] != null) {
                     echo "Die Zutat existiert bereits";
@@ -84,14 +75,20 @@
                         $alcohol = 0;
                     }
 
-                   // $query = "INSERT INTO t_user (Firstname, Lastname, Password, Username, Mail, Picture) VALUES ('$firstName', '$lastName', '$hash', '$userName', '$email', '$picture') ";
-                    $queryShit = "INSERT INTO t_ingredient(Ingredient, Alcohol) VALUES ('$name', '$alcohol') ";
-                    $Shit = mysqli_query($connection, $queryShit);
-                    echo "$Shit";
+                    $query = "INSERT INTO t_ingredient(Ingredient, Alcohol) VALUES ('$name', '$alcohol') ";
+                    mysqli_query($connection, $query);
 
                     if ($allergenic != "Keine") {
                         $I_ID = "SELECT I_ID FROM t_ingredient WHERE Ingredient = '$name'";
+                        $I_IDresult = mysqli_query($connection, $I_ID);
+                        $I_IDrow = $I_IDresult->fetch_assoc();
+
                         $A_ID = "SELECT A_ID FROM t_additive WHERE Allergenic = '$allergenic'";
+                        $A_IDresult = mysqli_query($connection, $A_ID);
+                        $A_IDrow = $A_IDresult->fetch_assoc();
+
+                        $A_ID = $A_IDrow['A_ID'];
+                        $I_ID = $I_IDrow['I_ID'];
                         $additiveQuery = "INSERT INTO t_has (A_ID, I_ID) VALUES ('$A_ID', '$I_ID')";
 
                         mysqli_query($connection, $additiveQuery);
@@ -114,20 +111,20 @@
                 }
 
                 $varpass = ($passwordsha);
-                if(!isset(  $_SESSION["login"]) || isset(  $_SESSION["login"]) && $_SESSION["login"] == 0){
-                  if ( $varrow == $varpass){
-                      echo "Sie haben sich erfolgreich angemeldet";
-                       $_SESSION['user'] = $userName;
-                      
+                if(!isset($_SESSION["login"]) || isset($_SESSION["login"]) && $_SESSION["login"] == 0){
+                    if ($varrow == $varpass){
+                        echo "Sie haben sich erfolgreich angemeldet";
+                        $_SESSION['user'] = $userName;
+
                         $_SESSION["login"] = 1;
-                      echo "<script>
+                        echo "<script>
                         window.parent.location.reload();
                       </script>";
 
-                  } else {
-                      echo "Benutzername und Passwort stimmen nicht überein";
-                      echo "<br><button onclick=\"location.href = 'login.php'\">Zurück</button>";
-                  }
+                    } else {
+                        echo "Benutzername und Passwort stimmen nicht überein";
+                        echo "<br><button onclick=\"location.href = 'login.php'\">Zurück</button>";
+                    }
                 }
 
             }

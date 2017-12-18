@@ -1,6 +1,9 @@
 <html>
 <?php
     include 'connection.php';
+    session_start();
+    $_SESSION['user'];
+    $_SESSION["login"];
 ?>
 <head>
     <meta charset="UTF-8">
