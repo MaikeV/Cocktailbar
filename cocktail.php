@@ -36,35 +36,35 @@
                     <tr>
                         <td><select title="ingredient" name="ingredient[]">
                         <?php
-                        $query = "SELECT * FROM t_ingredient";
-                        $ingredients = mysqli_query($connection, $query);
+                            $query = "SELECT * FROM t_ingredient";
+                            $ingredients = mysqli_query($connection, $query);
 
-                        while($t_ingredient = mysqli_fetch_object($ingredients)) {
-                            echo "<option>$t_ingredient->Ingredient</option>";
-                        }
+                            while($t_ingredient = mysqli_fetch_object($ingredients)) {
+                                echo "<option>$t_ingredient->Ingredient</option>";
+                            }
 
-                        echo   "</select></td>";
+                            echo   "</select></td>";
                         ?>
 
                         <td><input type="number" title="amount" name="amount[]" required></td>
                         <td><select title="unit" name="unit[]">
 
                         <?php
-                                $query = "SELECT * FROM t_unit";
-                                $units = mysqli_query($connection, $query);
+                            $query = "SELECT * FROM t_unit";
+                            $units = mysqli_query($connection, $query);
 
-                                while($t_unit = mysqli_fetch_object($units)) {
-                                    echo "<option>$t_unit->Description</option>";
-                                }
+                            while($t_unit = mysqli_fetch_object($units)) {
+                                echo "<option>$t_unit->Description</option>";
+                            }
 
-                                echo   "</select></td>";
-                         ?>
+                            echo   "</select></td>";
+                        ?>
                     </tr>
                     </tbody>
                 </table>
                 <a href="addIngredient.php">Die gewuenschte Zutat ist nicht dabei? Hier Erstellen</a>
                 <label for="taRecipe"></label>
-                <textarea placeholder="Zubereitung" name="taRecipe" id="taRecipe"></textarea>
+                <textarea placeholder="Zubereitung" name="taRecipe" id="taRecipe" required></textarea>
             </div>
             <input type="hidden" name="type" value="newCocktail">
 

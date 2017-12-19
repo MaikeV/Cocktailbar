@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="login">
-            <form action="SaveEntry.php" method="post">
+            <form action="handleLogin.php" method="post">
                 <h1>Anmelden</h1>
 
                 <label>Benutzername:</label>

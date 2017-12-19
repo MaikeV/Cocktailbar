@@ -36,22 +36,41 @@
                     $userName = $_SESSION['user'];
                     $name = $_POST["CName"];
                     $picture = $_POST["CPicture"];
-                    $ingredient = $_POST["ingredient"];
-                    $amount = $_POST["amount"];
-                    $unit = $_POST["unit"];
+                    $ingredient = $_POST["ingredient"]; //array
+                    $amount = $_POST["amount"];         //array
+                    $unit = $_POST["unit"];             //array
                     $howTo = $_POST["taRecipe"];
 
-                    foreach($ingredient as $a => $b) {
+                    $U_ID = mysqli_query($connection,"SELECT U_ID FROM t_user WHERE Username = '$userName'");
 
-                        $UN_ID[$a] = "SELECT UN_ID FROM t_unit where Description='$unit[$a]'";
-
-                        $ingredientQuery = "INSERT INTO t_ingredient(Ingredient, UN_ID) VALUES('$ingredient[$a]', '$$UN_ID[$a]')";
-                        $I_ID[$a] = "SELECT I_ID FROM t_ingredient WHERE Ingredient = '$ingredient[$a]' AND UN_ID = '$UN_ID[$a]'";
-                    }
-
-                    $query = "INSERT INTO t_cocktail(U_ID, Recipename, CocktailPic, Recipe) VALUES('$userName', '$name', '$picture', '$howTo')";
-
+                        if ($U_ID = $U_ID->fetch_assoc()) {
+                            $U_ID = $U_ID['U_ID'];
+                        } else {
+                            echo "UserID konnte nicht gefunden werden";
+                        }
+                    $query = "INSERT INTO t_cocktail(U_ID, Recipename, CocktailPic, Recipe) VALUES ('$U_ID', '$name', '$picture', '$howTo')";
                     mysqli_query($connection, $query);
+                    $C_ID = mysqli_query($connection, "SELECT C_ID FROM t_cocktail order by C_ID desc limit 1");
+                    $C_ID = $C_ID->fetch_assoc();
+                    $C_ID = $C_ID['C_ID'];
+
+                    for($index = 0; $index < count($ingredient); $index++) {
+                        $I_ID = mysqli_query($connection, "SELECT I_ID FROM t_ingredient WHERE Ingredient = '$ingredient[$index]'");
+                        if ($I_ID = $I_ID->fetch_assoc()) {
+                            $I_ID = $I_ID['I_ID'];
+                        } else {
+                            echo "Ingredient ID konnte nicht gefunden werden";
+                        }
+                        $UN_ID = mysqli_query($connection, "SELECT UN_ID FROM t_unit WHERE Description = '$unit[$index]'");
+                        if ($UN_ID = $UN_ID->fetch_assoc()) {
+                            $UN_ID = $UN_ID['UN_ID'];
+                        } else {
+                            echo "Unit ID konnte nicht gefunden werden";
+                        }
+                        $quantity = $amount[$index];
+
+                        mysqli_query($connection, "INSERT INTO t_contains (I_ID, C_ID, UN_ID, Quantity) VALUES ('$I_ID', '$C_ID', '$UN_ID', '$quantity')");
+                    }
 
                     echo "Cocktail wurde erfolgreich gespeichert";
                     echo "<br><button onclick=\"location.href = 'main.php'\">Zur Startseite</button>";
@@ -96,37 +115,6 @@
 
                     echo "Die Zutat wurde erfolgreich gespeichert";
                 }
-            }
-            else if($type == "login") {
-                $userName = $_POST['userNameLogin'];
-                $passwordLogin = $_POST['passwordLogin'];
-                $dummy = $_POST["dummy"];
-                $passwordsha = hash('sha256', $passwordLogin);
-                $result = mysqli_query($connection, "SELECT Password FROM t_user WHERE username='$userName'");
-
-                $varrow = "";
-
-                while ($row = $result->fetch_assoc()) {
-                    $varrow = $row['Password'];
-                }
-
-                $varpass = ($passwordsha);
-                if(!isset($_SESSION["login"]) || isset($_SESSION["login"]) && $_SESSION["login"] == 0){
-                    if ($varrow == $varpass){
-                        echo "Sie haben sich erfolgreich angemeldet";
-                        $_SESSION['user'] = $userName;
-
-                        $_SESSION["login"] = 1;
-                        echo "<script>
-                        window.parent.location.reload();
-                      </script>";
-
-                    } else {
-                        echo "Benutzername und Passwort stimmen nicht überein";
-                        echo "<br><button onclick=\"location.href = 'login.php'\">Zurück</button>";
-                    }
-                }
-
             }
         ?>
     </body>
