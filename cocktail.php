@@ -12,7 +12,7 @@
     <title>Title</title>
 </head>
 <body>
-    <div class="create">
+    <div class="backgroundDiv">
         <form action="SaveEntry.php" method="post">
             <label for="CName">Name:</label>
             <input type="text" name="CName" title="CocktailName" placeholder="Name" required>

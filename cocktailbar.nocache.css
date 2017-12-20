@@ -75,7 +75,7 @@ input[type=text], input[type=password], input[type=email], select{
     box-sizing: border-box;
 }
 
-.register, .login, .create{
+.backgroundDiv {
     margin-left: 25%;
     width: 50%;
     border-radius: 5px;

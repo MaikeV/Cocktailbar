@@ -9,7 +9,7 @@
         <title>Title</title>
     </head>
     <body>
-        <div class="create">
+        <div class="backgroundDiv">
             <form action="SaveEntry.php" method="post">
                 <label for="name">Name:
                     <input type="text" name="name" required>

@@ -10,7 +10,7 @@
     <title>Title</title>
 </head>
 <body>
-    <div class="register">
+    <div class="backgroundDiv">
         <form action="SaveEntry.php" method="post">
             <h1>Neuen Account anlegen</h1>
 

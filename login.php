@@ -9,7 +9,7 @@
         <title>Cocktailbar</title>
     </head>
     <body>
-        <div class="login">
+        <div class="backgroundDiv">
             <form action="handleLogin.php" method="post">
                 <h1>Anmelden</h1>
 
