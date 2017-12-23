@@ -2,9 +2,6 @@
 <?php
 include 'connection.php';
 session_start();
-$_SESSION['user'];
-$_SESSION["login"];
-$_SESSION['C_ID'];
 ?>
 <head>
     <meta charset="UTF-8">
@@ -30,7 +27,7 @@ $_SESSION['C_ID'];
                     $results = mysqli_query($connection, "SELECT * FROM t_cocktail");
 
                     while($t_cocktail = mysqli_fetch_object($results)) {
-                        echo $_SESSION['C_ID'] = $t_cocktail->C_ID;
+
                         if(isset($t_cocktail->C_ID) && isset($t_cocktail->Recipename) && isset($t_cocktail->Recipe)) {
                             echo "
                                 <form action='displayCocktail.php' method='post'>

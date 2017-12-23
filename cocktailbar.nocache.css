@@ -1,12 +1,18 @@
 h1 {
     color: white;
+    font-family:"Segoe UI",Arial,sans-serif;
+    margin-left: 1%;
+}
+
+h3 {
+    color: white;
     font-family:"Segoe UI",Arial,sans-serif;;
     margin-left: 1%;
 }
 
-    .hidden {
-        display: none;
-    }
+.hidden {
+    display: none;
+}
 
 thead {
     text-align: center;
@@ -193,4 +199,39 @@ input[type=text], input[type=password], input[type=email], select{
 .ListPicture {
     height: 200px;
     width: 200px;
+}
+
+.displayPicture {
+    float: left;
+}
+.ingredients {
+    float: right;
+}
+
+#table {
+    font-family:"Segoe UI",Arial,sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    display: inline;
+}
+
+#table td, #table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#table tr:nth-child(even) {
+    background-color: #51b504;
+}
+
+#table tr:hover {
+    background-color: #4b4b4b;
+}
+
+#table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #51b504;
+    color: white;
 }

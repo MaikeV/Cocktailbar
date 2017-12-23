@@ -2,9 +2,6 @@
 <?php
 include 'connection.php';
 session_start();
-$_SESSION['user'];
-$_SESSION["login"];
-$_SESSION['C_ID'];
 
 echo "<script>window.parent.scroll(0, 0);</script>"
 ?>
@@ -42,9 +39,47 @@ echo "<script>window.parent.scroll(0, 0);</script>"
                 $howTo = $howTo->fetch_assoc();
                 $howTo = $howTo['Recipe'];
 
+                $results = mysqli_query($connection, "SELECT * FROM t_contains WHERE C_ID = $C_ID");
+
+
                 echo "<h1>$name</h1>
                     <img src='$picture' height='300' width='300'>
-                    <p>$howTo</p>";
+                    <div class='ingredients'>
+                        <table id='table'>
+                            <thead>
+                                <tr>
+                                    <th>Zutat</th>
+                                    <th>Menge</th>
+                                    <th>Einheit</th>
+                                </tr>
+                            </thead>";
+                while($t_contains = mysqli_fetch_object($results)) {
+                    $Ingredient = mysqli_query($connection, "SELECT Ingredient FROM t_ingredient WHERE I_ID = $t_contains->I_ID");
+                    if ($Ingredient = $Ingredient->fetch_assoc()) {
+                        $Ingredient = $Ingredient['Ingredient'];
+                    }
+                    $amount = $t_contains->Quantity;
+                    $unit = mysqli_query($connection, "SELECT Description FROM t_unit WHERE UN_ID = $t_contains->UN_ID");
+                    if ($unit = $unit->fetch_assoc()) {
+                        $unit = $unit['Description'];
+                    }
+
+                    echo "
+                                <tbody>
+                                    <tr>
+                                        <td>$Ingredient</td>
+                                        <td>$amount</td>
+                                        <td>$unit</td>
+                                    </tr>
+                                </tbody>";
+                }
+
+                echo "</table>
+                    </div>
+                    <h3>Zubereitung:</h3>
+                    <p>$howTo</p>
+                    ";
+
 
 
                     if(isset($_SESSION["login"]) && $_SESSION["login"] == 1){
@@ -61,7 +96,10 @@ echo "<script>window.parent.scroll(0, 0);</script>"
                           $OverallRating += $t_rated->Rating;
                           $counter++;
                         }
-                        $OverallRating = $OverallRating / $counter;
+						if($counter != 0){
+							$OverallRating = $OverallRating / $counter;
+						}
+                        
 
                       echo "
                       <span onClick=onStarClick(1) class='fa fa-star'></span>
