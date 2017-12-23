@@ -10,7 +10,7 @@
 
         <h1>Herzlich Willkommen auf Cocktailbar.de</h1>
             <?php
-//                $query = "SELECT * FROM t_cocktail order by C_ID desc limit 5";
+                $query = "SELECT * FROM t_cocktail order by C_ID desc limit 5";
             ?>
 
     </div>

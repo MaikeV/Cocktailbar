@@ -17,6 +17,38 @@ option {
     color: black;
 }
 
+.dropdown-stuff {
+    position: relative;
+    display: inline-block;
+}
+
+.checked {
+    color: orange;
+}
+
+.dropdown-content a:hover{
+  background-color: #f1f1f1;
+}
+.dropdown-content a{
+  color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100%;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-stuff:hover .dropdown-content {
+    display: block;
+}
 button, input[type=file], input[type=button] {
     margin-top: 20px;
     margin-left: 30px;

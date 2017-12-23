@@ -2,6 +2,12 @@
 <?php
 include 'connection.php';
 session_start();
+
+
+
+
+
+
 ?>
     <head>
         <meta charset="UTF-8">
@@ -13,12 +19,12 @@ session_start();
     <body>
         <div class="backgroundDiv">
             <?php
-                if(isset($_POST["name"]) AND !empty($_POST["name"]) && isset($_POST["howTo"]) AND !empty($_POST["howTo"]) && isset($_POST["C_ID"]) AND !empty($_POST["C_ID"])) {
+              //  if(isset($_POST["name"]) AND !empty($_POST["name"]) && isset($_POST["howTo"]) AND !empty($_POST["howTo"]) && isset($_POST["C_ID"]) AND !empty($_POST["C_ID"])) {
                     $name = $_POST["name"];
                     $picture = $_POST["picture"];
                     $howTo = $_POST["howTo"];
 
-                }
+                //}
                 $C_ID = $_POST["C_ID"];
 
                 echo $C_ID;

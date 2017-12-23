@@ -9,17 +9,12 @@
         <title>Cocktailbar</title>
     </head>
     <body>
-
-
               <?php
                 session_start();
-
                   $_SESSION['login'] = 0;
                   echo "<script>
                     window.parent.location.reload();
                   </script>";
-
               ?>
-            
     </body>
 </html>
