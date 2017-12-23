@@ -22,7 +22,7 @@
 
 /* Article photo */
 
-.article-list-vertical li > a{
+.article-list-vertical li > img{
     float: left;
     width: 200px;
     height: 200px;
