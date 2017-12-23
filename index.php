@@ -15,7 +15,6 @@
                 <div style="overflow:auto">
                     <div class="navBar navLeft" style="width: 100%; overflow: hidden; height: 75px">
                         <a type="submit" class="navBarItem navButton" href="main.php" target="display">Startseite</a>
-                        <a type="submit" class="navBarItem navButton" href="account.php" target="display">Mein Konto</a>
                         <?php
                           if(isset($_SESSION["login"]) && $_SESSION["login"] == 1){
                             echo "<a type='submit' class='navBarItem navButton' href='logout.php' target='display'>Ausloggen</a>
@@ -27,7 +26,7 @@
                           }
                          ?>
                         <a type="submit" class="navBarItem navButton" href="list.php" target="display">Cocktails</a>
-                        <input class="search navBarItem navBarRight" type="search" title="Search" placeholder="Suchen">
+
                     </div>
                 </div>
             </div>
